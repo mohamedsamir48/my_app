@@ -6,7 +6,7 @@ app_publisher = "mohamed"
 app_description = "my app"
 app_email = "mo"
 app_license = "MIT"
-
+fixtures = ["Custom Field"]
 # Includes in <head>
 # ------------------
 
@@ -94,9 +94,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Sales Order": "my_app.overrides.sales_order.CustomSalesOrder",
+	"Sales Invoice": "my_app.overrides.sales_invoice.SalesInvoice"
+}
 
 # Document Events
 # ---------------
